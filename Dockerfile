@@ -4,7 +4,7 @@ MAINTAINER Jeroen Geusebroek <me@jeroengeusebroek.nl>
 ENV DEBIAN_FRONTEND="noninteractive" \
     TERM="xterm" \
     APTLIST="curl ca-certificates sudo python" \
-    REFRESHED_AT='2017-01-02'
+    REFRESHED_AT='2017-02-24'
 
 RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup &&\
     echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
@@ -13,7 +13,7 @@ RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup &&\
     apt-get install -qy --force-yes $APTLIST && \
 
     # Download and install latest NZBGet
-    curl --tlsv1 -L -o /tmp/nzbget.run https://github.com/nzbget/nzbget/releases/download/v18.0-r1858/nzbget-18.0-testing-r1858-bin-linux.run && \
+    curl --tlsv1 -L -o /tmp/nzbget.run https://github.com/nzbget/nzbget/releases/download/v18.0/nzbget-18.0-bin-linux.run && \
     sh /tmp/nzbget.run --destdir /usr/lib/nzbget && \
 
     # Download and install latest unrar
