@@ -3,8 +3,8 @@ MAINTAINER Jeroen Geusebroek <me@jeroengeusebroek.nl>
 
 ENV DEBIAN_FRONTEND="noninteractive" \
     TERM="xterm" \
-    APTLIST="curl ca-certificates sudo python" \
-    REFRESHED_AT='2017-09-27'
+    APTLIST="curl ca-certificates sudo python p7zip-full" \
+    REFRESHED_AT='2018-08-04'
 
 RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup &&\
     echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
