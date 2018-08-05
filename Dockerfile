@@ -13,7 +13,7 @@ RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup &&\
     apt-get install -qy --force-yes $APTLIST && \
 
     # Download and install latest NZBGet
-    curl --tlsv1 -L -o /tmp/nzbget.run https://github.com/nzbget/nzbget/releases/download/v19.1/nzbget-19.1-bin-linux.run && \
+    curl --tlsv1 -L -o /tmp/nzbget.run https://github.com/nzbget/nzbget/releases/download/v20.0/nzbget-20.0-bin-linux.run && \
     sh /tmp/nzbget.run --destdir /usr/lib/nzbget && \
 
     # Download and install latest unrar
